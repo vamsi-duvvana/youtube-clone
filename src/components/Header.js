@@ -5,6 +5,7 @@ import { IconContext } from "react-icons";
 import { LOGO } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { toggleHamburger } from "../utils/configSlice";
+import { Link } from "react-router-dom";
 
 
 
@@ -20,7 +21,9 @@ const Header = () => {
                         <GiHamburgerMenu />
                     </IconContext.Provider>
                 </button>
-                <img className="p-2 h-14 ml-2 aspect-auto" src={LOGO} alt="logo" />
+                <a href="/">
+                    <img className="p-2 h-14 ml-2 aspect-auto" src={LOGO} alt="logo" />
+                </a>
             </div>
             <Search />
             <div>

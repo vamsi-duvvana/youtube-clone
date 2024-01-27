@@ -8,7 +8,7 @@ const ButtonList = () => {
     const selectedButtonIndex = useSelector(store => store.config.selectedButtonIndex);
 
     return (
-        <div className="flex">
+        <div className="flex p-2">
             {BUTTON_LIST_NAME.map((name, index) => {
                 return (
                     <div key={index}>

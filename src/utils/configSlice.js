@@ -12,9 +12,12 @@ const configSlice = createSlice({
         },
         changeSelectedButtonIndex: (state, action) => {
             state.selectedButtonIndex = action.payload;
+        },
+        closeMenu: (state, action) => {
+            state.toggleHamburger = true
         }
     }
 })
 
-export const { toggleHamburger, changeSelectedButtonIndex } = configSlice.actions;
+export const { toggleHamburger, changeSelectedButtonIndex, closeMenu } = configSlice.actions;
 export default configSlice.reducer;
