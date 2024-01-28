@@ -1,4 +1,3 @@
-import Comment from "./Comment"
 import CommentsList from "./CommentsList"
 
 const commentsContainer = () => {
