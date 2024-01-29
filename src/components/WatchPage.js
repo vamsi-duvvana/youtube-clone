@@ -4,6 +4,7 @@ import { closeMenu } from '../utils/configSlice';
 import { useSearchParams } from 'react-router-dom';
 import CommentsContainer from './CommentsContainer'
 import { GOOGLE_API_KEY, VIDEO_DATA_URL } from '../utils/constants';
+import LiveChat from './LiveChat';
 
 const WatchPage = () => {
 
@@ -24,20 +25,25 @@ const WatchPage = () => {
     }, [])
 
     return (
-        <>
+        <div className='flex w-full px-5'>
             <div className='flex flex-col'>
-                <div className='px-5'>
-                    <iframe
-                        width="1100"
-                        height="550"
-                        src={`https://www.youtube.com/embed/${id}?si=3iVFPvNyepj9tYNk`}
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-                        allowFullScreen
-                        className='rounded-lg'
-                    >
-                    </iframe>
+                <div className=''>
+                    <div>
+                        <iframe
+                            width="1000"
+                            height="500"
+                            src={`https://www.youtube.com/embed/${id}?si=3iVFPvNyepj9tYNk`}
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                            allowFullScreen
+                            className='rounded-lg'
+                        >
+                        </iframe>
+                    </div>
+                    {/* <div className='w-full'>
+                    <LiveChat />
+                </div> */}
                     <div>
                         <div className='p-2 text-2xl font-semibold'>{videoData?.snippet?.title}</div>
                         <div className='flex justify-between'>
@@ -57,7 +63,10 @@ const WatchPage = () => {
                 </div>
                 <CommentsContainer />
             </div>
-        </>
+            <div className='w-full'>
+                <LiveChat />
+            </div>
+        </div>
     )
 }
 
