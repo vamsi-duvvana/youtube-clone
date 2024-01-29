@@ -5,9 +5,6 @@ import { IconContext } from "react-icons";
 import { LOGO } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { toggleHamburger } from "../utils/configSlice";
-import { Link } from "react-router-dom";
-
-
 
 const Header = () => {
 
